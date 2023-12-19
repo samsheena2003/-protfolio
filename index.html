@@ -43,7 +43,7 @@
         </div>
     </div>
 </nav>
-
+<div style="color: aliceblue;" id="catFact"></div>
 
  <!-- main banner -->
  <section class="bgimage" id="home">
@@ -319,5 +319,19 @@
 
     <!-- load javascript after loading all html content -->
     <script src="script/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  const settings = {
+  async: true,
+  crossDomain: true,
+  url: 'https://catfact.ninja/fact',
+  method: 'GET'
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  $('#catFact')[0].innerHTML = response.fact;
+});
+</script>
 </body>
 </html>
