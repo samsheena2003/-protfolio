@@ -341,7 +341,7 @@ $.ajax(settings).done(function (response) {
 </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 <script type="text/javascript">
-    axios.get('http://api.weatherstack.com/current?access_key=e64be90508de3e219fbe665a67b4b344&query=Kadaba').then((response) => {
+    axios.get('https://api.weatherstack.com/current?access_key=e64be90508de3e219fbe665a67b4b344&query=Kadaba').then((response) => {
       console.log(response);
       $('#place')[0].innerHTML = response.data.location.name;
       $('#state')[0].innerHTML = response.data.location.region;
